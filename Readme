@@ -1,0 +1,32 @@
+A chat server following IRC protocols, created by mithras and me in C++
+tested with IRC client "irssi"
+
+how to use:
+run 'make'
+run ./ircServer "port" "password"
+example: ./ircServer 1024 1234
+
+a local server is now running and can communicate with any existing IRC - clients
+open a new console and run "irssi" (might have to install irssi first, not sure)
+(to stop and exit, type '/exit' in the irssi console)
+
+if using irssi, connect with (in irssi console)
+/connect localhost 1024 1234 nick
+
+you can run multiple connections on one machine (in seperate consoles)
+the first one to join or create a channel becomes operator
+if operator(s) leave the room, the next 'oldest' becomes operator
+if all users leave, the room is deleted
+
+while connected, several commands can be used (in irssi console)
+/nick 'newnickname'
+/join 'roomname' (either joins existing or create new)
+/part (leave current room)
+/kick 'roomname' 'username' (if operator)
+/topic 'roomtopicname' (set room topic, only if operator)
+
+to simply say something in the room, type something without '/'
+or do
+/say "hello folks!"
+
+/exit will completely stop and exit the irssi process
