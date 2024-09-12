@@ -22,6 +22,7 @@ while connected, several commands can be used (in irssi console)
 /nick 'newnickname'
 /join 'roomname' (either joins existing or create new)
 /part (leave current room)
+/invite 'username' (invite a connected user to your active room)
 /kick 'roomname' 'username' (if operator)
 /topic 'roomtopicname' (set room topic, only if operator)
 
